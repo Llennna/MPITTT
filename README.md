@@ -21,7 +21,7 @@
 Скачайте проект с GitHub:  
 
 ```bash
-git clone https://github.com/createandchoose/Boostify.git
+git clone https://github.com/Llennna/MPITTT.git
 ```
 ```bash
 cd Boostify
