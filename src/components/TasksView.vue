@@ -6,7 +6,7 @@
     <div class="tabs-menu w-tab-menu">
       <a v-for="tab in tabs" :key="tab.id" @click="currentTab = tab.id" data-w-tab="Tab 1"
         class="tabbb11c w-inline-block w-tab-link" :class="currentTab === tab.id ? 'w--current' : ''">
-        <img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf3d842cd0e8c51e6e431b_trophy.svg" width="24"
+        <img src="" width="24"
           height="24">
         <div class="text-20">{{ tab.name }}</div>
       </a>
