@@ -4,16 +4,17 @@ from base import Base  # Импортируем Base из base.py
 from sqlalchemy.orm import relationship
 from enum import Enum as PyEnum
 from sqlalchemy import Enum
+import enum
 
 
 class Role(str, PyEnum):
     ADMIN = "admin"
     USER = "user"
 
-class TaskStatus(str, PyEnum):
+class TaskStatus(str, enum.Enum):
     IN_PROGRESS = "В процессе"
     ON_REVIEW = "На проверке"
-    COMPLETED = "Сделано"
+    COMPLETED = "Выполнено"
     FAILED = "Провалено"
 
 class User(Base):
@@ -45,12 +46,12 @@ class Task(Base):
     __tablename__ = "tasks"
 
     id = Column(Integer, primary_key=True, index=True)
-    description = Column(String, nullable=False)  # Описание задачи
-    points = Column(Integer, nullable=False)      # Баллы за задачу
-    coins = Column(Integer, nullable=False)       # Монеты за задачу
-    deadline = Column(DateTime, nullable=False)   # Дедлайн задачи
-    status = Column(Enum(TaskStatus), default=TaskStatus.IN_PROGRESS)  # Статус задачи
-    user_id = Column(Integer, ForeignKey("users.id"))  # Пользователь, создавший задачу
+    description = Column(String)
+    points = Column(Integer)
+    coins = Column(Integer)
+    deadline = Column(DateTime)
+    status = Column(Enum(TaskStatus), default=TaskStatus.IN_PROGRESS)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     
     # Связь с пользователем
     user = relationship("User", back_populates="tasks")

@@ -30,7 +30,7 @@ const route = useRoute()
 
 const navigation = [
   { name: 'Главная', to: '/', icon: Home },
-  { name: 'Лидеры', to: '/leaderboard', icon: Trophy },
+  // { name: 'Лидеры', to: '/leaderboard', icon: Trophy },
   { name: 'Магазин', to: '/market', icon: ShoppingCart },
   { name: 'Задачи', to: '/tasks', icon: ClipboardList },
   { name: 'Админ', to: '/admin/tasks', icon: Settings }

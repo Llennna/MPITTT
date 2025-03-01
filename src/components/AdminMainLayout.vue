@@ -24,13 +24,14 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { FileText, PlusSquare, User } from 'lucide-vue-next'
+import { FileText, PlusSquare, User, Home } from 'lucide-vue-next'
 
 const route = useRoute()
 
 const navigation = [
   { name: 'Таски', to: '/admin/tasks', icon: FileText },
   { name: 'Создать', to: '/admin/create-task', icon: PlusSquare },
-  { name: 'Панель', to: '/admin/panel', icon: User }
+  { name: 'Панель', to: '/admin/panel', icon: User },
+  { name: 'Главная', to: '/', icon: Home }
 ]
 </script>

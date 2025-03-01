@@ -12,7 +12,7 @@ import json
 from schemas import TaskCreate, TaskSchema
 from fastapi.middleware.cors import CORSMiddleware
 from urllib.parse import parse_qs
-
+from datetime import datetime
 from typing import List
 
 # Создаем таблицы в базе данных (если их нет)
@@ -619,3 +619,82 @@ def update_task_status(task_id: int, request: UpdateTaskStatusRequest, db: Sessi
     db.refresh(task)
     
     return {"message": "Статус задачи успешно обновлен", "status": task.status}
+
+@app.get("/admin/tasks", response_model=List[TaskSchema])
+def get_admin_tasks(db: Session = Depends(get_db)):
+    """Получить все задачи для админ-панели"""
+    tasks = db.query(Task).all()
+    return tasks
+
+@app.post("/admin/tasks", response_model=TaskSchema)
+def create_admin_task(task: TaskCreate, db: Session = Depends(get_db)):
+    """Создать новую задачу через админ-панель"""
+    try:
+        print(f"Получены данные задачи: {task.dict()}")  # Для отладки
+        
+        new_task = Task(
+            description=task.description,
+            points=task.points,
+            coins=task.coins,
+            deadline=task.deadline,
+            status=task.status,
+            user_id=task.user_id
+        )
+        
+        db.add(new_task)
+        db.commit()
+        db.refresh(new_task)
+        
+        print(f"Создана задача: {new_task.id}")  # Для отладки
+        return new_task
+        
+    except Exception as e:
+        print(f"Ошибка при создании задачи: {str(e)}")  # Для отладки
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Ошибка при создании задачи: {str(e)}")
+
+@app.put("/admin/tasks/{task_id}", response_model=TaskSchema)
+def update_admin_task(task_id: int, task: TaskCreate, db: Session = Depends(get_db)):
+    """Обновить существующую задачу через админ-панель"""
+    db_task = db.query(Task).filter(Task.id == task_id).first()
+    if not db_task:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    # Обновляем поля задачи
+    for field, value in task.dict(exclude_unset=True).items():
+        setattr(db_task, field, value)
+    
+    db.commit()
+    db.refresh(db_task)
+    return db_task
+
+@app.delete("/admin/tasks/{task_id}")
+def delete_admin_task(task_id: int, db: Session = Depends(get_db)):
+    """Удалить задачу через админ-панель"""
+    db_task = db.query(Task).filter(Task.id == task_id).first()
+    if not db_task:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    db.delete(db_task)
+    db.commit()
+    return {"message": "Task deleted successfully"}
+
+@app.get("/admin/users", response_model=List[UserSchema])
+def get_admin_users(db: Session = Depends(get_db)):
+    """Получить список всех пользователей для админ-панели"""
+    users = db.query(User).all()
+    return users
+
+@app.put("/admin/users/{user_id}/role")
+def update_user_role(user_id: int, role: str, db: Session = Depends(get_db)):
+    """Обновить роль пользователя через админ-панель"""
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    try:
+        user.role = Role[role.upper()]  # Конвертируем строку в enum
+        db.commit()
+        return {"message": "User role updated successfully"}
+    except KeyError:
+        raise HTTPException(status_code=400, detail="Invalid role")

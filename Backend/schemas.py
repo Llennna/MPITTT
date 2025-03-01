@@ -43,9 +43,9 @@ class TaskCreate(BaseModel):
     description: str
     points: int
     coins: int
-    deadline: datetime  # Дата дедлайна
-    user_id: int        # ID пользователя, создавшего задачу
+    deadline: datetime
     status: TaskStatus = TaskStatus.IN_PROGRESS
+    user_id: Optional[int] = None
 
 class TaskSchema(BaseModel):
     id: int
@@ -53,8 +53,8 @@ class TaskSchema(BaseModel):
     points: int
     coins: int
     deadline: datetime
-    user_id: int
     status: TaskStatus
+    user_id: Optional[int]
 
     class Config:
         from_attributes = True
