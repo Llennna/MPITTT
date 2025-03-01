@@ -5,6 +5,10 @@ import ProfileView from '../components/ProfileView.vue'
 import LeaderboardView from '../components/LeaderboardView.vue'
 import MarketView from '../components/MarketView.vue'
 import TasksView from '../components/TasksView.vue'
+import AdminMainLayout from '../components/AdminMainLayout.vue'
+import AdminTasksView from '../components/AdminTasksView.vue'
+import AdminPanelView from '../components/AdminPanelView.vue'
+import AdminCreateTaskView from '../components/AdminCreateTaskView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -37,7 +41,30 @@ const router = createRouter({
           path: 'tasks',
           name: 'tasks',
           component: TasksView
-        }
+        },
+        {
+          path: 'admin',
+          name: 'admin',
+          component: AdminMainLayout,
+          children: [
+            {
+              path: 'tasks',
+              name: 'admin-tasks',
+              component: AdminTasksView
+            },
+            {
+              path: 'panel',
+              name: 'admin-panel',
+              component: AdminPanelView
+            },
+            {
+              path: 'create-task',
+              name: 'admin-create-task',
+              component: AdminCreateTaskView
+            }
+          ]
+        },
+        
       ]
     }
   ]

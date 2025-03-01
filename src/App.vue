@@ -43,6 +43,11 @@ export default {
   },
   methods: {
     async initTelegram() {
+      if (!window.Telegram) {
+        console.error('Telegram WebApp не найден');
+        return;
+      }
+      
       const Telegram = window.Telegram.WebApp;
       Telegram.ready();
 
