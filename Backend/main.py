@@ -12,6 +12,7 @@ import json
 from schemas import TaskCreate, TaskSchema
 from fastapi.middleware.cors import CORSMiddleware
 from urllib.parse import parse_qs
+
 from typing import List
 
 # Создаем таблицы в базе данных (если их нет)
