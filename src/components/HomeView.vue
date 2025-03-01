@@ -71,6 +71,11 @@
                         width="24" height="24">
                     <div class="text-20">{{ tab.name }}</div>
                 </a>
+                <!-- Добавляем кнопку для админ-панели -->
+                <RouterLink to="/admin/tasks" class="tabbb11c w-inline-block w-tab-link">
+                    <img src="" width="24" height="24">
+                    <div class="text-20">Админ панель</div>
+                </RouterLink>
             </div>
 
 
@@ -205,6 +210,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { Star, CircleDollarSign, FileText } from 'lucide-vue-next'
+import { RouterLink } from 'vue-router'
 import axios from 'axios'
 
 const currentTab = ref('tasks')

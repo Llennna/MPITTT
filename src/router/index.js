@@ -41,30 +41,28 @@ const router = createRouter({
           path: 'tasks',
           name: 'tasks',
           component: TasksView
+        }
+      ]
+    },
+    {
+      path: '/admin',
+      component: AdminMainLayout,
+      children: [
+        {
+          path: 'tasks',
+          name: 'admin-tasks',
+          component: AdminTasksView
         },
         {
-          path: 'admin',
-          name: 'admin',
-          component: AdminMainLayout,
-          children: [
-            {
-              path: 'tasks',
-              name: 'admin-tasks',
-              component: AdminTasksView
-            },
-            {
-              path: 'panel',
-              name: 'admin-panel',
-              component: AdminPanelView
-            },
-            {
-              path: 'create-task',
-              name: 'admin-create-task',
-              component: AdminCreateTaskView
-            }
-          ]
+          path: 'panel',
+          name: 'admin-panel',
+          component: AdminPanelView
         },
-        
+        {
+          path: 'create-task',
+          name: 'admin-create-task',
+          component: AdminCreateTaskView
+        }
       ]
     }
   ]

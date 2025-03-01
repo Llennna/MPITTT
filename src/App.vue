@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <!-- <div id="app">
     <div v-if="!isAuthenticated">
       <h2>Авторизация через Telegram</h2>
       <p>Загрузка...</p>
@@ -14,7 +14,7 @@
       <p><strong>Монеты:</strong> {{ profile.coins }}</p>
       <p><strong>Роль:</strong> {{ profile.role }}</p>
     </div>
-  </div>
+  </div> -->
   <RouterView />
 </template>
 

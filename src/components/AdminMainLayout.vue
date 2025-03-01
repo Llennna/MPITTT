@@ -29,8 +29,8 @@ import { FileText, PlusSquare, User } from 'lucide-vue-next'
 const route = useRoute()
 
 const navigation = [
-  { name: 'Таски', to: '/tasks', icon: FileText },
-  { name: 'Создать', to: '/create', icon: PlusSquare },
-  { name: 'Панель', to: '/panel', icon: User }
+  { name: 'Таски', to: '/admin/tasks', icon: FileText },
+  { name: 'Создать', to: '/admin/create-task', icon: PlusSquare },
+  { name: 'Панель', to: '/admin/panel', icon: User }
 ]
 </script>
