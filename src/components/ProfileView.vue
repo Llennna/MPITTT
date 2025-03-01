@@ -8,7 +8,7 @@
         <div class="zag">Мой профиль</div>
         <div class="frame-447">
             <div class="frame-68">
-                <div class="imgprof"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf3891dc4677c6939c8862_ava.png" loading="lazy" alt=""></div>
+                <div class="imgprof"><img src="" loading="lazy" alt=""></div>
                 <div class="content-style">
                     <div class="component elements">
                         <div class="text">Айтал Попов</div>
