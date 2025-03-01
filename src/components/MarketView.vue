@@ -27,11 +27,11 @@
 
         <div class="text-dark">Мерч компании</div>
 
-        <div class="frame-2204"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf4347c12d1955a383891e_Frame%202171.jpg" loading="lazy" class="image">
+        <div class="frame-2204"><img src="" loading="lazy" class="image">
             <div class="frame-2205">
                 <div class="text-26">Толстовка B8</div>
                 <div class="frame-59">
-                    <div class="frame-44730"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf41227a5f33e953f3e81b_Frame-1115.svg" loading="lazy" width="24" height="24" alt="" class="frame-1115">
+                    <div class="frame-44730"><img src="" loading="lazy" width="24" height="24" alt="" class="frame-1115">
                         <div class="text-27">600,00</div>
                     </div>
                     <div class="frame-44731">
@@ -40,11 +40,11 @@
                 </div>
             </div>
         </div>
-        <div class="frame-2204"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf427908e737648858f89c_tovar.png" loading="lazy" alt="" class="image">
+        <div class="frame-2204"><img src="" loading="lazy" alt="" class="image">
             <div class="frame-2205">
                 <div class="text-26">Кепка B8</div>
                 <div class="frame-59">
-                    <div class="frame-44730"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf41227a5f33e953f3e81b_Frame-1115.svg" loading="lazy" width="24" height="24" alt="" class="frame-1115">
+                    <div class="frame-44730"><img src="" loading="lazy" width="24" height="24" alt="" class="frame-1115">
                         <div class="text-27">600,00</div>
                     </div>
                     <div class="frame-44731">
@@ -86,7 +86,7 @@
                 <div class="text-33-copy">Есть размеры XS, S</div>
             </div>
             <div class="frame-44735">
-                <div class="frame-44736"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf2af63cef5a3c5753b102_Frame-1114.svg" loading="lazy" width="24" height="24" alt="" class="frame-44737">
+                <div class="frame-44736"><img src="" loading="lazy" width="24" height="24" alt="" class="frame-44737">
                     <div class="component-14 elements">
                         <div class="label-style-2">КУПИТЬ ЗА 800,00 BOOST</div>
                     </div>

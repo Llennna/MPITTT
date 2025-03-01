@@ -29,7 +29,7 @@
                 <div class="frame-2170">
                     <div class="text-16">Текущий баланс</div>
                 </div>
-                <div class="frame-2171"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf2af63cef5a3c5753b102_Frame-1114.svg" loading="lazy" width="24" height="24" alt="" class="frame-2172">
+                <div class="frame-2171"><img src="" loading="lazy" width="24" height="24" alt="" class="frame-2172">
                     <div class="text-17">450,00</div>
                 </div>
                 <a href="#" target="_blank" class="button-style fill">
@@ -55,7 +55,7 @@
         <div class="section-style icon">
             <div class="frame-35">
                 <a href="#" target="_blank" class="button-style-2 icon">
-                    <div class="emoji basketball"><img src="../../67bf26ad9cb30c9bdf27f087/67bf2af6be25d567d755d8bf_basketball.png" loading="lazy" width="36" height="36" alt="" class="basketball"></div>
+                    <div class="emoji basketball"><img src="" loading="lazy" width="36" height="36" alt="" class="basketball"></div>
                 </a>
                 <div class="component-4 elements">
                     <div class="text-15">Достжения</div>
@@ -64,7 +64,7 @@
             </div>
             <div class="frame-35">
                 <a href="#" target="_blank" class="button-style-3 icon">
-                    <div class="emoji-2 boxing-glove"><img src="../../67bf26ad9cb30c9bdf27f087/67bf2af787dfe31687668a7c_boxing-glove.png" loading="lazy" width="37.125" height="36" alt="" class="basketball"></div>
+                    <div class="emoji-2 boxing-glove"><img src="" loading="lazy" width="37.125" height="36" alt="" class="basketball"></div>
                 </a>
                 <div class="component-5 elements">
                     <div class="text-15">Сделано</div>
@@ -73,7 +73,7 @@
             </div>
             <div class="frame-35">
                 <a href="#" target="_blank" class="button-style-4 icon">
-                    <div class="emoji sparkles"><img src="../../67bf26ad9cb30c9bdf27f087/67bf2af7af0ccf2ac9fbe5d9_sparkles.png" loading="lazy" width="37.125" height="36" alt="" class="basketball"></div>
+                    <div class="emoji sparkles"><img src="" loading="lazy" width="37.125" height="36" alt="" class="basketball"></div>
                 </a>
                 <div class="component-6 elements">
                     <div class="text-15">Награды</div>
@@ -88,13 +88,13 @@
                 </div>
                 <div class="section-style-6 icon">
                     <div class="frame-44758">
-                        <a href="#" target="_blank" class="button-style-6 icon"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67c01fb43fca7eb034f97d8b_basketball.png" loading="lazy" width="50" height="50" alt="" class="basketball-2"></a>
+                        <a href="#" target="_blank" class="button-style-6 icon"><img src="" loading="lazy" width="50" height="50" alt="" class="basketball-2"></a>
                     </div>
                     <div class="frame-44758">
-                        <a href="#" target="_blank" class="button-style-6 icon"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67c01fb43fca7eb034f97d8b_basketball.png" loading="lazy" width="50" height="50" alt="" class="basketball-2"></a>
+                        <a href="#" target="_blank" class="button-style-6 icon"><img src="" loading="lazy" width="50" height="50" alt="" class="basketball-2"></a>
                     </div>
                     <div class="frame-44758">
-                        <a href="#" target="_blank" class="button-style-6 icon"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67c01fb43fca7eb034f97d8b_basketball.png" loading="lazy" width="50" height="50" alt="" class="basketball-2"></a>
+                        <a href="#" target="_blank" class="button-style-6 icon"><img src="" loading="lazy" width="50" height="50" alt="" class="basketball-2"></a>
                     </div>
                     <div class="frame-41">
                         <div class="text-48">+1</div>
@@ -112,15 +112,15 @@
                 </div>
             </div>
             <div class="qwrqwr">
-                <div class="frame-44762"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67c01fb656ce29c1fe84cada_basketball.png" loading="lazy" width="50" height="50" alt="" class="basketball-3">
+                <div class="frame-44762"><img src="" loading="lazy" width="50" height="50" alt="" class="basketball-3">
                     <div class="text-50">Сертификат отличия</div>
                     <div class="text-51">02.03.2025</div>
                 </div>
-                <div class="frame-44762"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67c01fb614ba701f5fa087c1_basketball.png" loading="lazy" width="50" height="50" alt="" class="basketball-3">
+                <div class="frame-44762"><img src="" loading="lazy" width="50" height="50" alt="" class="basketball-3">
                     <div class="text-50">Знак почета</div>
                     <div class="text-51">12.12.2024</div>
                 </div>
-                <div class="frame-44762"><img src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67c01fb614ba701f5fa087c1_basketball.png" loading="lazy" width="50" height="50" alt="" class="basketball-3">
+                <div class="frame-44762"><img src="" loading="lazy" width="50" height="50" alt="" class="basketball-3">
                     <div class="text-50">Знак почета</div>
                     <div class="text-51">12.12.2024</div>
                 </div>

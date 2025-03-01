@@ -35,7 +35,7 @@
               <div class="text-24">⚡ {{ task.rewards.points }} Баллов</div>
               <div class="text-25">|</div>
               <img
-                src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf3e32c809cc85f7d64c2a_Frame-1114.svg"
+                src=""
                 loading="lazy" width="18" height="18" alt="" class="frame-44728">
               <div class="text-24">{{ task.rewards.boost }} BOOST</div>
             </div>
@@ -49,7 +49,7 @@
           <div class="frame-65">
             <div class="component-9 elements">
               <img
-                src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf3e338898d8365b6f0858_file-filled.svg"
+                src=""
                 loading="lazy" width="24" height="24" alt="" class="file-filled">
               <div class="label-style">
                 {{ getActionButtonText(task.status) }}
@@ -83,7 +83,7 @@
               <div class="text-24">⚡ {{ task.rewards.points }} Баллов</div>
               <div class="text-25">|</div>
               <img
-                src="../../b8stify.webflow.io/67bf26ad9cb30c9bdf27f087/67bf3e32c809cc85f7d64c2a_Frame-1114.svg"
+                src=""
                 loading="lazy" width="18" height="18" alt="" class="frame-44728">
               <div class="text-24">{{ task.rewards.boost }} BOOST</div>
             </div>
