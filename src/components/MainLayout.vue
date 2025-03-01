@@ -24,7 +24,7 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { Home, Trophy, ShoppingCart, ClipboardList, Settings } from 'lucide-vue-next'
+import { Home, Trophy, ShoppingCart, ClipboardList, Settings, } from 'lucide-vue-next'
 
 const route = useRoute()
 
@@ -33,6 +33,7 @@ const navigation = [
   // { name: 'Лидеры', to: '/leaderboard', icon: Trophy },
   { name: 'Магазин', to: '/market', icon: ShoppingCart },
   { name: 'Задачи', to: '/tasks', icon: ClipboardList },
+  { name: 'Профиль', to: '/profile', icon: ClipboardList },
   { name: 'Админ', to: '/admin/tasks', icon: Settings }
 ]
 </script>
