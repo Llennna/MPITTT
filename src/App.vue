@@ -1,20 +1,4 @@
 <template>
-  <!-- <div id="app">
-    <div v-if="!isAuthenticated">
-      <h2>Авторизация через Telegram</h2>
-      <p>Загрузка...</p>
-    </div>
-    <div v-else>
-      <h2>Профиль пользователя</h2>
-      <img :src="profile.photo_url" alt="Avatar" class="avatar" />
-      <p><strong>Имя:</strong> {{ profile.first_name }}</p>
-      <p><strong>Фамилия:</strong> {{ profile.last_name }}</p>
-      <p><strong>Username:</strong> {{ profile.username }}</p>
-      <p><strong>Очки:</strong> {{ profile.points }}</p>
-      <p><strong>Монеты:</strong> {{ profile.coins }}</p>
-      <p><strong>Роль:</strong> {{ profile.role }}</p>
-    </div>
-  </div> -->
   <RouterView />
 </template>
 
