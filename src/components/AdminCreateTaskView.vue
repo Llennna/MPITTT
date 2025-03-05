@@ -26,6 +26,16 @@
           ></textarea>
         </div>
 
+        <!-- Deadline -->
+        <div>
+          <h3 class="font-medium mb-3">Дедлайн</h3>
+          <input
+            type="datetime-local"
+            v-model="form.deadline"
+            class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+        </div>
+
         <!-- Rewards -->
         <div>
           <h3 class="font-medium mb-3">Награда</h3>
@@ -73,15 +83,68 @@
 <script setup>
 import { ref } from 'vue'
 import { Star, CircleDollarSign, FileText } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
+import axios from 'axios'
+
+const router = useRouter()
 
 const form = ref({
   title: '',
   description: '',
   points: '',
-  boost: ''
+  boost: '',
+  deadline: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 16) // Дефолтное значение - неделя от текущей даты
 })
 
-const handleSubmit = () => {
-  console.log('Form submitted:', form.value)
+const handleSubmit = async () => {
+  try {
+    // Проверяем, что все поля заполнены
+    if (!form.value.title || !form.value.description || !form.value.points || !form.value.boost || !form.value.deadline) {
+      alert('Пожалуйста, заполните все поля')
+      return
+    }
+
+    // Подготавливаем данные в соответствии с TaskCreate схемой
+    const taskData = {
+      description: `${form.value.title}\n${form.value.description}`,
+      points: parseInt(form.value.points) || 0,
+      coins: parseInt(form.value.boost) || 0,
+      deadline: new Date(form.value.deadline).toISOString(), // Используем выбранный дедлайн
+      status: "В процессе",
+      user_id: null
+    }
+
+    console.log('Отправляемые данные:', JSON.stringify(taskData, null, 2))
+
+    const response = await axios.post('http://localhost:8000/create-task', taskData)
+    console.log('Ответ сервера:', response.data)
+
+    // Очищаем форму после успешного создания
+    form.value = {
+      title: '',
+      description: '',
+      points: '',
+      boost: '',
+      deadline: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 16)
+    }
+
+    alert('Задача успешно создана!')
+    router.push('/admin/tasks')
+
+  } catch (error) {
+    console.error('Полная ошибка:', error)
+    console.error('Данные ошибки:', error.response?.data)
+    
+    let errorMessage = 'Ошибка при создании задачи: '
+    if (error.response?.data?.detail) {
+      errorMessage += JSON.stringify(error.response.data.detail)
+    } else if (error.response?.data) {
+      errorMessage += JSON.stringify(error.response.data)
+    } else {
+      errorMessage += error.message
+    }
+    
+    alert(errorMessage)
+  }
 }
 </script>

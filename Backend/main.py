@@ -240,24 +240,26 @@ def read_product(product_id: int, db: Session = Depends(get_db)):
 # Эндпоинт для создания задачи
 @app.post("/create-task", response_model=TaskSchema)
 def create_task(task: TaskCreate, db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.id == task.user_id).first()
-    if not user:
-        raise HTTPException(status_code=404, detail="Пользователь не найден")
-
-    new_task = Task(
-        description=task.description,
-        points=task.points,
-        coins=task.coins,
-        deadline=task.deadline,
-        user_id=task.user_id,
-        status=task.status
-    )
-
-    db.add(new_task)
-    db.commit()
-    db.refresh(new_task)
-
-    return new_task
+    try:
+        new_task = Task(
+            description=task.description,
+            points=task.points,
+            coins=task.coins,
+            deadline=task.deadline,
+            status=task.status,
+            user_id=None  # Явно указываем, что user_id может быть None
+        )
+        
+        db.add(new_task)
+        db.commit()
+        db.refresh(new_task)
+        
+        return new_task
+        
+    except Exception as e:
+        print(f"Ошибка при создании задачи: {str(e)}")
+        db.rollback()
+        raise HTTPException(status_code=500, detail=str(e))
 
 # Эндпоинт для добавления продукта
 @app.post("/products/", response_model=ProductSchema)
